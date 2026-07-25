@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Todo App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#111111">
 </head>
 
 <body>
 
-<div class="container">
+<header class="header">
+  <h1>TaskFlow</h1>
+  <p>Deine persönliche Aufgabenverwaltung</p>
+</header>
 
-<h1>📝 Todo App</h1>
+<main class="dashboard">
 
-<div class="user-buttons">
-<button onclick="switchUser('Ben')" class="active" id="btnBen">Ben</button>
-<button onclick="switchUser('Partner')" id="btnPartner">Partner</button>
-</div>
+  <section class="welcome card">
+      <h2>Hallo Ben 👋</h2>
+      <p>Willkommen zurück.</p>
 
-<div class="input-area">
-<input type="text" id="taskInput" placeholder="Neue Aufgabe...">
-<button onclick="addTask()">+</button>
-</div>
+      <div class="progress">
+          <div class="progress-bar"></div>
+      </div>
 
-<ul id="todoList"></ul>
+      <span>72 % erledigt</span>
+  </section>
 
-</div>
+  <section class="quick-actions">
 
-<script src="script.js"></script>
+      <a href="tasks.html" class="action-card">
+          ✅
+          <h3>Aufgaben</h3>
+      </a>
+
+      <a href="calendar.html" class="action-card">
+          📅
+          <h3>Kalender</h3>
+      </a>
+
+      <a href="shopping.html" class="action-card">
+          🛒
+          <h3>Einkauf</h3>
+      </a>
+
+      <a href="statistics.html" class="action-card">
+          📊
+          <h3>Statistik</h3>
+      </a>
+
+  </section>
+
+</main>
+
+<nav class="bottom-nav">
+
+<a href="index.html">🏠</a>
+
+<a href="tasks.html">✅</a>
+
+<a href="calendar.html">📅</a>
+
+<a href="shopping.html">🛒</a>
+
+<a href="settings.html">⚙️</a>
+
+</nav>
+
+<script src="js/app.js"></script>
 
 </body>
 </html>
